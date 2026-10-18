@@ -1,0 +1,19 @@
+# Private environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*password*
+*credential*
+*.log
+*.jsonl
+.DS_Store
+Thumbs.db
+# Local copies and artifacts
+backups/
+private/
+raw-logs/

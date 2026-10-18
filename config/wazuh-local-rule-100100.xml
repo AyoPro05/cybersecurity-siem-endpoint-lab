@@ -1,0 +1,11 @@
+<!-- Experimental excerpt for integration into Wazuh local_rules.xml.
+     Live alert matching was NOT confirmed in the lab. -->
+<group name="local,sysmon,windows,">
+  <rule id="100100" level="7">
+    <if_group>sysmon_event_11</if_group>
+    <field name="win.eventdata.image" type="pcre2">(?i)powershell\.exe$</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\SOC-Lab\\Case-003\\</field>
+    <description>SOC-LAB-CASE-003: PowerShell created a file in the controlled Case-003 directory</description>
+    <group>sysmon,sysmon_event11,soc_lab_case003,</group>
+  </rule>
+</group>

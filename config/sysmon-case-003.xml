@@ -1,0 +1,12 @@
+<!-- Controlled lab example only; restrict to authorized test scope. -->
+<Sysmon schemaversion="4.91">
+  <HashAlgorithms>SHA256</HashAlgorithms>
+  <EventFiltering>
+    <NetworkConnect onmatch="include">
+      <DestinationPort>8080</DestinationPort>
+    </NetworkConnect>
+    <FileCreate onmatch="include">
+      <TargetFilename condition="begin with">C:\SOC-Lab\Case-003\</TargetFilename>
+    </FileCreate>
+  </EventFiltering>
+</Sysmon>
