@@ -1,15 +1,25 @@
-I recently completed a practical phase of my Cybersecurity SIEM & Endpoint Detection Home Lab using Wazuh, Sysmon, Windows 11, Ubuntu/WSL2, Docker and PowerShell.
+I'm pleased to share a cybersecurity project I've been working on: **Cybersecurity SIEM & Endpoint Detection Engineering Home Lab**.
 
-My goal was to move beyond setting up tools and practise the thinking required in a real SOC investigation.
+I wanted to go beyond learning security tools and experience what it takes to investigate events, validate detections and troubleshoot monitoring gaps in a practical SOC environment.
 
-I worked through controlled PowerShell execution, local network activity and file creation, then investigated the evidence using Sysmon events, process IDs, ProcessGuid correlation and Wazuh rules. One of my biggest lessons came from troubleshooting: Sysmon was installed, but network and file creation events weren't initially enabled in its configuration. After correcting that, I was able to reproduce and correlate the endpoint activity.
+I built a monitoring lab using Wazuh, Sysmon, Windows 11, Ubuntu, Docker and PowerShell.
 
-I also discovered an important limitation. Even though the endpoint events were present, my experimental custom Wazuh rule did not produce a confirmed alert. I documented that gap rather than calling the detection successful without evidence.
+One of my investigations involved generating a controlled PowerShell execution event, analysing Sysmon Event ID 1 and tracing the corresponding alert in Wazuh. I confirmed rule 92027 and mapped the activity to MITRE ATT&CK T1059.001.
 
-My biggest takeaway: seeing an event, collecting it and generating a useful security alert are different things. A good analyst needs to know the difference and investigate with context, not assumptions.
+In another investigation, I simulated an authorised local HTTP download and correlated Sysmon network connection and file creation events using ProcessGuid.
 
-I've documented the architecture, the investigation cases, the troubleshooting and the lessons learned on GitHub.
+The biggest lesson came from troubleshooting.
 
-GitHub: [ADD YOUR REPOSITORY LINK AFTER PUBLISHING]
+I discovered that having security tools installed does not guarantee complete visibility. I had to investigate missing Sysmon telemetry, update monitoring configurations and validate the results. I also documented a custom Wazuh detection that did not generate a confirmed alert.
 
-#CyberSecurity #SOCAnalyst #Wazuh #Sysmon #ThreatDetection #BlueTeam #SecurityEngineering #HomeLab
+That experience reminded me of something important:
+
+**A security alert tells us what was detected. A proper investigation helps us understand what happened, why it happened and whether it represents a threat.**
+
+I've documented the architecture, commands, investigations, screenshots, troubleshooting and lessons learned on GitHub.
+
+🔗 **Project:** https://github.com/AyoPro05/cybersecurity-siem-endpoint-lab
+
+I'm continuing to strengthen my practical skills in SOC operations, threat detection, incident investigation and security engineering.
+
+#Cybersecurity #SOCAnalyst #SecurityEngineering #Wazuh #Sysmon #BlueTeam #IncidentResponse #DetectionEngineering #MITREATTACK
