@@ -69,7 +69,13 @@ The following screenshots were collected from the working home lab during a live
 
 ## Security and reproducibility
 
-All exercises were authorized and performed in an isolated personal lab. The local HTTP request used `127.0.0.1:8080` and a harmless text file. This repository contains **sanitized examples**, not exported production credentials, authentication tokens, private keys, complete agent configurations, or raw personal identifiers. Review screenshots before committing.
+### Security and Privacy
+
+This repository documents a controlled cybersecurity home lab developed for educational purposes, practical SOC investigations and detection engineering.
+
+All security testing was authorised and conducted within my personal lab environment. Screenshots and configuration examples have been reviewed and redacted where necessary to protect sensitive information.
+
+No passwords, API tokens, private keys or authentication credentials are intentionally included. Technical evidence, including event IDs, process identifiers, detection rules and timestamps, has been preserved to maintain the integrity and reproducibility of the investigations.
 
 The configuration examples are instructional and intentionally scoped to a controlled test. The Wazuh rule is **experimental, not production validated**.
 
