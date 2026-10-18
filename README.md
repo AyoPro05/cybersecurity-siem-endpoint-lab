@@ -46,7 +46,7 @@ MITRE ATT&CK provides behavioral context, not proof of malicious activity. Case 
 
 ## Evidence from October 18, 2026
 
-The following screenshots were collected from the working home lab during a live reproduction. These contain local machine/account labels and should be reviewed before public release.
+The following screenshots were captured from the operational home lab on 18 October 2026. Sensitive identifying details have been redacted where necessary, while relevant technical evidence has been preserved.
 
 ![Active Wazuh endpoints](screenshots/05-wazuh-endpoints-dashboard.png)
 
